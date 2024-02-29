@@ -29,9 +29,6 @@ namespace CMP1903_A1_2324
             Die dice3 = new Die();
             int roll3 = dice3.RollDice();
             Console.WriteLine($"Roll of dice 3 is {roll3}");
-
-            int sum = roll1 + roll2 + roll3;
-            Console.WriteLine($"Summation of 3 dice rolls is {sum}");
         }
 
     }
