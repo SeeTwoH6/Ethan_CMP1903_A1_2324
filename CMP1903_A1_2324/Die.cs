@@ -26,7 +26,6 @@ namespace CMP1903_A1_2324
         public int RollDice()
         {
             Roll = roll.Next(1,6);
-            Console.WriteLine($"Current number randomly generated is {Roll}");
             return Roll;
         }
 
