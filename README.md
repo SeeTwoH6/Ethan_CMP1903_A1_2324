@@ -1,0 +1,7 @@
+Code Content for CMP1903 Assessment 1 Submission: Dice Game with Testing
+Contains four scripts - Game, Die, Testing, Program
+Die contains one property called Roll and one method that generates a random number between 1 and 6 and assigns it to Roll.
+Game has variables for holding the sum of dice rolls and a list to hold each individual die roll. Contains methods to create die and roll them, then add that result to a list, another for summing the contents of the DieList, another for printing to the user the result of each individual of dice roll, and a method to simply print the result of the sum.
+Testing creates a different Die object and Game object than what the program runs. I was not really sure how to present viable tests that confirm the ode will work in every situation but the current implementation is to check whether the Roll of the dice is between 1 and 6 inclusively and checking if the CalcSum() method used to add each dice roll together is the same as adding each element in DieList manually.
+Program creates a Game object, and processes user inputs to check whether the user wishes to roll another dice. Once the user is finished, the other methods of the Game class are called to sum and print the result to the user as well as what each die rolled. 
+Program also creates a Testing object if and only if the result of CalcSum() is greater than 0, because otherwise it means that the user rolled no dice.
