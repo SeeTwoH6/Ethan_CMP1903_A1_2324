@@ -17,18 +17,43 @@ namespace CMP1903_A1_2324
 
             //Instantiating a new Game object
             Game game = new Game();
-            int numberOfDice = 3; //Required so that the program can work for a variable number of dice
-            for (int i = 0; i < numberOfDice; i++)
+            bool addDice = true;
+            while (addDice)
             {
-                game.CreateDice();
+                Console.WriteLine("Roll dice? (yes/no)");
+                string answer = Console.ReadLine().ToLower(); //Converts all inputs to lower case
+                if (answer.Length < 1) //Guard Clause to catch empty strings
+                {
+                    Console.WriteLine("Please input a string");
+                    continue;
+                }
+                else if (answer == "yes")
+                {
+                    game.CreateDice();
+                }
+                else if (answer == "no")
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Please input either 'yes' or 'no'");
+                }
             }
             game.PrintDice(); 
             game.CalcSum();
             Console.WriteLine($"The sum of all of the dice rolls is {game.PrintSum()}");
 
             //Creating and running an instance of the Testing class
-            Testing checker = new Testing();
-            checker.Check();
+            if (game.PrintSum() > 0)
+            {
+                Testing checker = new Testing();
+                checker.Check();
+            }
+            else
+            {
+                Console.WriteLine("No die were rolled, testing not required");
+            }
             Console.ReadLine();
         }
     }
