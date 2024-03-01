@@ -17,8 +17,7 @@ namespace CMP1903_A1_2324
 
             //Instantiating a new Game object
             Game game = new Game();
-            bool addDice = true;
-            while (addDice)
+            while (true)
             {
                 Console.WriteLine("Roll dice? (yes/no)");
                 string answer = Console.ReadLine().ToLower(); //Converts all inputs to lower case
