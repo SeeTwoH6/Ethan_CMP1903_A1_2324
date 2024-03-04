@@ -25,7 +25,7 @@ namespace CMP1903_A1_2324
         private static Random roll = new Random();
         public int RollDice()
         {
-            Roll = roll.Next(1,6);
+            Roll = roll.Next(1, 6);
             return Roll;
         }
 

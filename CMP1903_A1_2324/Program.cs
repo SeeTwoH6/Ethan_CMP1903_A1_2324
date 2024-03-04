@@ -39,7 +39,7 @@ namespace CMP1903_A1_2324
                     Console.WriteLine("Please input either 'yes' or 'no'");
                 }
             }
-            game.PrintDice(); 
+            game.PrintDice();
             game.CalcSum();
             Console.WriteLine($"The sum of all of the dice rolls is {game.PrintSum()}");
 

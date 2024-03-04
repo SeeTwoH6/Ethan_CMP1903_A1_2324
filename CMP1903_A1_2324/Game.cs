@@ -64,7 +64,7 @@ namespace CMP1903_A1_2324
             foreach (int i in DieList)
             {
                 Console.WriteLine($"Roll of die {count} is {i}");
-                count ++;
+                count++;
             }
         }
 
