@@ -21,7 +21,7 @@ namespace CMP1903_A1_2324
             {
                 Console.WriteLine("Roll dice? (yes/no)");
                 string answer = Console.ReadLine().ToLower(); //Converts all inputs to lower case
-                if (answer.Length < 1) //Guard Clause to catch empty strings
+                if (answer.Length < 1) //Exception Handling - Guard Clause to catch empty strings
                 {
                     Console.WriteLine("Please input a string");
                     continue;
