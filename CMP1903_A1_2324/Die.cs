@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace CMP1903_A1_2324
 {
@@ -24,7 +24,5 @@ namespace CMP1903_A1_2324
             Roll = roll.Next(1, 6);
             return Roll;
         }
-
-
     }
 }

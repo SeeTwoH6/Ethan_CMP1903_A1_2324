@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 
 namespace CMP1903_A1_2324
@@ -12,6 +12,7 @@ namespace CMP1903_A1_2324
          * Use debug.assert() to make the comparisons and tests.
          */
 
+        
         //Method
         public void Check()
         {
