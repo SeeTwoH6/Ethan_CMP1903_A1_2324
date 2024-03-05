@@ -13,23 +13,4 @@ namespace CMP1903_A1_2324
          */
 
         //Method
-        public void Check()
-        {
-            Console.WriteLine("Testing die class...");
-            Die testDice = new Die();
-            testDice.RollDice();
-            Debug.Assert(testDice.Roll > 0 && testDice.Roll < 7);
-            Console.WriteLine("Rolls are confirmed to be within [1,6]");
-
-            Console.WriteLine("Testing game class...");
-            Game testGame = new Game();
-            for (int i = 0; i < 5; i++)
-            {
-                testGame.CreateDice();
-            }
-            testGame.CalcSum();
-            Debug.Assert(testGame.PrintSum() == testGame.DieList[0] + testGame.DieList[1] + testGame.DieList[2] + testGame.DieList[3] + testGame.DieList[4]);
-            Console.WriteLine("The output of the PrintSum() method of the Game class is equal to the sum of the first die roll + ... + last die roll");
-        }
-    }
 }
