@@ -11,6 +11,11 @@ namespace CMP1903_A1_2324
          * EXTRA: For extra requirements (these aren't required though), the dice rolls could be managed so that the
          * rolls could be continous, and the totals and other statistics could be summarised for example.
          */
+        //Variables
+        private List<Die> _DieList = new List<Die>(); //List required mainly for testing purposes as I need access to each dice roll from outside this class
+        //Properties
+        public int Sum {get; set; } //Property definition improvement from the review process
+        public List<Die> DieList //This property still has to be formatted as such otherwise, null exception errors occur
 
         //Variables
         private int _Sum;
@@ -29,6 +34,13 @@ namespace CMP1903_A1_2324
         }
 
         //Methods
+        //Creates an object of class Die adds it to a list
+        public void CreateDice()
+        {
+            Die die = new Die();
+            die.RollDice();
+            DieList.Add(die);
+        //Methods
         //Creates an object of class Die, rolls it and adds it to a list
         public void CreateDice()
         {
@@ -39,6 +51,12 @@ namespace CMP1903_A1_2324
         //Goes through each item in the list and adds them together
         public int CalcSum()
         {
+            foreach (Die dice in DieList)
+            {
+                Sum += dice.Roll;
+            }
+            //Print statement moved here as pointed out by a reviewer that the brief specifies it should be here
+            Console.WriteLine($"The sum of all of the dice rolls is {Sum}");
             foreach (int dice in DieList)
             {
                 Sum += dice;
@@ -57,6 +75,9 @@ namespace CMP1903_A1_2324
         public void PrintDice()
         {
             int count = 1;
+            foreach (Die dice in DieList)
+            {
+                Console.WriteLine($"Roll of die {count} is {dice.Roll}");
             foreach (int i in DieList)
             {
                 Console.WriteLine($"Roll of die {count} is {i}");

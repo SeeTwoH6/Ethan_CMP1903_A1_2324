@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace CMP1903_A1_2324
 {
@@ -37,7 +39,6 @@ namespace CMP1903_A1_2324
             }
             game.PrintDice();
             game.CalcSum();
-            Console.WriteLine($"The sum of all of the dice rolls is {game.PrintSum()}");
 
             //Creating and running an instance of the Testing class
             if (game.PrintSum() > 0)
