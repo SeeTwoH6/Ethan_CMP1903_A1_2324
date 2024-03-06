@@ -10,15 +10,6 @@ namespace CMP1903_A1_2324
          */
         //Property
         public int Roll {get; set;} //Property definition improvement from the review process
-        //Variables
-        private int _Roll;
-
-        //Property
-        public int Roll
-        {
-            get { return _Roll; }
-            set { _Roll = value; }
-        }
         //Method
         private static Random roll = new Random();
         public int RollDice()

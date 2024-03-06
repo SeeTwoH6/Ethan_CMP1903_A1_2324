@@ -34,7 +34,6 @@ namespace CMP1903_A1_2324
             //Used 5*1 and 5*6 because these are the respective min and max values a game could result in
             Debug.Assert(testGame.PrintSum() >= 5 * 1 && testGame.PrintSum() <= 5 * 6, "The sum totalled to an unexpected value");
             Console.WriteLine("The sum of the test game were within acceptable parameters");
-            Console.WriteLine("The output of the PrintSum() method of the Game class is equal to the sum of the first die roll + ... + last die roll");
         }
     }
 }
