@@ -23,7 +23,9 @@ namespace CMP1903_A1_2324
 
 
         //Methods
-        //Creates an object of class Die adds it to a list
+        /// <summary>
+        /// Creates an object of class Die adds it to a list
+        /// </summary>
         public void CreateDice()
         {
             Die dice = new Die();
@@ -31,7 +33,10 @@ namespace CMP1903_A1_2324
             DieList.Add(dice);
         }
 
-        //Goes through each item in the list and adds them together
+        /// <summary>
+        /// Goes through each item in the list and adds them together
+        /// </summary>
+        /// <returns>A single integer holding the sum of all dice rolls</returns>
         public int CalcSum()
         {
             foreach (Die dice in DieList)
@@ -43,14 +48,19 @@ namespace CMP1903_A1_2324
             return Sum;
         }
 
-        //Prints sum of dice roll
         //Created a separate method as calling CalcSum() multiple times incorrectly recalculates the sum of dice
+        /// <summary>
+        /// Prints sum of dice roll
+        /// </summary>
+        /// <returns>The previously calculated sum of rolls</returns>
         public int PrintSum()
         {
             return Sum;
         }
 
-        //Prints the information to the user of what each die rolled
+        /// <summary>
+        /// Prints the information to the user of what each die rolled
+        /// </summary>
         public void PrintDice()
         {
             int count = 1;

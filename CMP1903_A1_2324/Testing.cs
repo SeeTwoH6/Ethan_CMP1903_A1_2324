@@ -13,6 +13,9 @@ namespace CMP1903_A1_2324
          */
 
         //Method
+        /// <summary>
+        /// Creates a test game and die object, tests their methods and outputs a summary to the user
+        /// </summary>
         public void Check()
         {
             Console.WriteLine("Testing die class...");
