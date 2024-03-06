@@ -12,14 +12,8 @@ namespace CMP1903_A1_2324
          * rolls could be continous, and the totals and other statistics could be summarised for example.
          */
         //Variables
-        private List<Die> _DieList = new List<Die>(); //List required mainly for testing purposes as I need access to each dice roll from outside this class
-        //Properties
-        public int Sum {get; set; } //Property definition improvement from the review process
-        public List<Die> DieList //This property still has to be formatted as such otherwise, null exception errors occur
-        {
-            get { return _DieList; }
-            set { _DieList = value; }
-        }
+        private List<Die> DieList = new List<Die>(); //List required mainly for testing purposes as I need access to each dice roll from outside this class
+        private int sum = 0;
 
 
         //Methods
@@ -41,11 +35,11 @@ namespace CMP1903_A1_2324
         {
             foreach (Die dice in DieList)
             {
-                Sum += dice.Roll;
+                sum += dice.Roll;
             }
             //Print statement moved here as pointed out by a reviewer that the brief specifies it should be here
-            Console.WriteLine($"The sum of all of the dice rolls is {Sum}");
-            return Sum;
+            Console.WriteLine($"The sum of all of the dice rolls is {sum}");
+            return sum;
         }
 
         //Created a separate method as calling CalcSum() multiple times incorrectly recalculates the sum of dice
@@ -55,7 +49,7 @@ namespace CMP1903_A1_2324
         /// <returns>The previously calculated sum of rolls</returns>
         public int PrintSum()
         {
-            return Sum;
+            return sum;
         }
 
         /// <summary>
