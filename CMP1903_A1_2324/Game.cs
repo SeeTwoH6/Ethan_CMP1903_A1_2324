@@ -21,8 +21,9 @@ namespace CMP1903_A1_2324
             set { _DieList = value; }
         }
 
+
         //Methods
-        //Creates an object of class Die, rolls it and adds it to a list
+        //Creates an object of class Die adds it to a list
         public void CreateDice()
         {
             Die dice = new Die();
